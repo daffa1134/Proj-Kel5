@@ -6,7 +6,7 @@ package GUI;
 
 /**
  *
- * @author Daffa M
+ * @author Kelompok 5
  */
 public class Home extends javax.swing.JFrame {
 
