@@ -27,44 +27,57 @@ public class Recomendation extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        rasaMakanan = new javax.swing.ButtonGroup();
         ynMakanan = new javax.swing.ButtonGroup();
         shtMakanan = new javax.swing.ButtonGroup();
-        rasaMinuman = new javax.swing.ButtonGroup();
+        sizeMinuman = new javax.swing.ButtonGroup();
+        ynEs = new javax.swing.ButtonGroup();
+        ynKafein = new javax.swing.ButtonGroup();
         bg = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
         jLayeredPane1 = new javax.swing.JLayeredPane();
         layerMakanan = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        jCheckBox2 = new javax.swing.JCheckBox();
+        jCheckBox3 = new javax.swing.JCheckBox();
+        jCheckBox4 = new javax.swing.JCheckBox();
+        jCheckBox5 = new javax.swing.JCheckBox();
+        jCheckBox6 = new javax.swing.JCheckBox();
         jLabel3 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jRadioButton7 = new javax.swing.JRadioButton();
         jRadioButton8 = new javax.swing.JRadioButton();
         jLabel5 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
         jRadioButton9 = new javax.swing.JRadioButton();
         jRadioButton10 = new javax.swing.JRadioButton();
         jLabel6 = new javax.swing.JLabel();
+        jComboBox2 = new javax.swing.JComboBox<>();
         layerMinuman = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
+        jCheckBox7 = new javax.swing.JCheckBox();
+        jCheckBox8 = new javax.swing.JCheckBox();
+        jCheckBox9 = new javax.swing.JCheckBox();
+        jCheckBox10 = new javax.swing.JCheckBox();
+        jLabel8 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        jLabel10 = new javax.swing.JLabel();
+        jRadioButton4 = new javax.swing.JRadioButton();
+        jRadioButton5 = new javax.swing.JRadioButton();
+        jLabel11 = new javax.swing.JLabel();
+        jRadioButton6 = new javax.swing.JRadioButton();
         jRadioButton11 = new javax.swing.JRadioButton();
-        jRadioButton12 = new javax.swing.JRadioButton();
-        jRadioButton13 = new javax.swing.JRadioButton();
-        jRadioButton14 = new javax.swing.JRadioButton();
-        jRadioButton15 = new javax.swing.JRadioButton();
-        jRadioButton16 = new javax.swing.JRadioButton();
+        jLabel12 = new javax.swing.JLabel();
+        jComboBox3 = new javax.swing.JComboBox<>();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Rekomendasi");
-        setPreferredSize(new java.awt.Dimension(800, 800));
         setResizable(false);
         setSize(new java.awt.Dimension(800, 800));
 
@@ -89,29 +102,23 @@ public class Recomendation extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel2.setText("Pilih rasa yang anda inginkan:");
 
-        rasaMakanan.add(jRadioButton1);
-        jRadioButton1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jRadioButton1.setText("Manis");
+        jCheckBox1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jCheckBox1.setText("Manis");
 
-        rasaMakanan.add(jRadioButton2);
-        jRadioButton2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jRadioButton2.setText("Asam");
+        jCheckBox2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jCheckBox2.setText("Asam");
 
-        rasaMakanan.add(jRadioButton3);
-        jRadioButton3.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jRadioButton3.setText("Asin");
+        jCheckBox3.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jCheckBox3.setText("Asin");
 
-        rasaMakanan.add(jRadioButton4);
-        jRadioButton4.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jRadioButton4.setText("Pahit");
+        jCheckBox4.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jCheckBox4.setText("Pahit");
 
-        rasaMakanan.add(jRadioButton5);
-        jRadioButton5.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jRadioButton5.setText("Pedas");
+        jCheckBox5.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jCheckBox5.setText("Pedas");
 
-        rasaMakanan.add(jRadioButton6);
-        jRadioButton6.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jRadioButton6.setText("Gurih");
+        jCheckBox6.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jCheckBox6.setText("Gurih");
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel3.setText("Jumlah uang yang anda miliki:");
@@ -130,9 +137,6 @@ public class Recomendation extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel5.setText("Pilih tipe makanan yang anda sukai:");
 
-        jComboBox2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tampilkan Semua", "China", "Indonesia", "Jepang", "Italia" }));
-
         shtMakanan.add(jRadioButton9);
         jRadioButton9.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jRadioButton9.setText("Healthy Food");
@@ -149,6 +153,10 @@ public class Recomendation extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel6.setText("Pilih asal negara produk:");
 
+        jComboBox2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tampilkan Semua", "China", "Indonesia", "Jepang", "Italia" }));
+        jComboBox2.setOpaque(false);
+
         javax.swing.GroupLayout layerMakananLayout = new javax.swing.GroupLayout(layerMakanan);
         layerMakanan.setLayout(layerMakananLayout);
         layerMakananLayout.setHorizontalGroup(
@@ -156,6 +164,18 @@ public class Recomendation extends javax.swing.JFrame {
             .addGroup(layerMakananLayout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addGroup(layerMakananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layerMakananLayout.createSequentialGroup()
+                        .addComponent(jCheckBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jCheckBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jCheckBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jCheckBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jCheckBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jCheckBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layerMakananLayout.createSequentialGroup()
                         .addComponent(jRadioButton9)
                         .addGap(18, 18, 18)
@@ -168,39 +188,25 @@ public class Recomendation extends javax.swing.JFrame {
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layerMakananLayout.createSequentialGroup()
-                        .addGroup(layerMakananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(layerMakananLayout.createSequentialGroup()
-                                .addComponent(jRadioButton1)
-                                .addGap(18, 18, 18)
-                                .addComponent(jRadioButton2)
-                                .addGap(18, 18, 18)
-                                .addComponent(jRadioButton3)
-                                .addGap(18, 18, 18)
-                                .addComponent(jRadioButton4)))
-                        .addGap(18, 18, 18)
-                        .addComponent(jRadioButton5)
-                        .addGap(18, 18, 18)
-                        .addComponent(jRadioButton6))
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(132, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
         layerMakananLayout.setVerticalGroup(
             layerMakananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layerMakananLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layerMakananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jRadioButton4)
-                    .addComponent(jRadioButton5)
-                    .addComponent(jRadioButton6))
-                .addGap(30, 30, 30)
+                    .addComponent(jCheckBox1)
+                    .addComponent(jCheckBox2)
+                    .addComponent(jCheckBox3)
+                    .addComponent(jCheckBox4)
+                    .addComponent(jCheckBox5)
+                    .addComponent(jCheckBox6))
+                .addGap(28, 28, 28)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -216,7 +222,7 @@ public class Recomendation extends javax.swing.JFrame {
                 .addGroup(layerMakananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton9)
                     .addComponent(jRadioButton10))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                .addGap(28, 28, 28)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -230,29 +236,63 @@ public class Recomendation extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel7.setText("Pilih rasa yang anda inginkan:");
 
-        rasaMinuman.add(jRadioButton11);
+        jCheckBox7.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jCheckBox7.setText("Manis");
+
+        jCheckBox8.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jCheckBox8.setText("Asam");
+
+        jCheckBox9.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jCheckBox9.setText("Asin");
+
+        jCheckBox10.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jCheckBox10.setText("Pahit");
+
+        jLabel8.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel8.setText("Jumlah uang yang anda miliki:");
+
+        jLabel9.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel9.setText("Pilih ukuran minuman:");
+
+        sizeMinuman.add(jRadioButton1);
+        jRadioButton1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jRadioButton1.setText("Kecil");
+
+        sizeMinuman.add(jRadioButton2);
+        jRadioButton2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jRadioButton2.setText("Sedang");
+
+        sizeMinuman.add(jRadioButton3);
+        jRadioButton3.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jRadioButton3.setText("Besar");
+
+        jLabel10.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel10.setText("Tambahkan es?");
+
+        ynEs.add(jRadioButton4);
+        jRadioButton4.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jRadioButton4.setText("Boleh");
+
+        ynEs.add(jRadioButton5);
+        jRadioButton5.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jRadioButton5.setText("Hangat Saja");
+
+        jLabel11.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel11.setText("Mengandung kafein?");
+
+        ynKafein.add(jRadioButton6);
+        jRadioButton6.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jRadioButton6.setText("Ya");
+
+        ynKafein.add(jRadioButton11);
         jRadioButton11.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jRadioButton11.setText("Asam");
+        jRadioButton11.setText("Tidak");
 
-        rasaMinuman.add(jRadioButton12);
-        jRadioButton12.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jRadioButton12.setText("Manis");
+        jLabel12.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel12.setText("Pilih asal negara produk:");
 
-        rasaMinuman.add(jRadioButton13);
-        jRadioButton13.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jRadioButton13.setText("Asin");
-
-        rasaMinuman.add(jRadioButton14);
-        jRadioButton14.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jRadioButton14.setText("Pahit");
-
-        rasaMinuman.add(jRadioButton15);
-        jRadioButton15.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jRadioButton15.setText("Pedas");
-
-        rasaMinuman.add(jRadioButton16);
-        jRadioButton16.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jRadioButton16.setText("Gurih");
+        jComboBox3.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tampilkan Semua", "China", "Indonesia", "Jepang", "Italia" }));
 
         javax.swing.GroupLayout layerMinumanLayout = new javax.swing.GroupLayout(layerMinuman);
         layerMinuman.setLayout(layerMinumanLayout);
@@ -261,38 +301,83 @@ public class Recomendation extends javax.swing.JFrame {
             .addGroup(layerMinumanLayout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addGroup(layerMinumanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layerMinumanLayout.createSequentialGroup()
-                        .addComponent(jRadioButton12)
+                        .addComponent(jRadioButton6)
                         .addGap(18, 18, 18)
-                        .addComponent(jRadioButton11)
+                        .addComponent(jRadioButton11))
+                    .addGroup(layerMinumanLayout.createSequentialGroup()
+                        .addComponent(jRadioButton4)
                         .addGap(18, 18, 18)
-                        .addComponent(jRadioButton13)
+                        .addComponent(jRadioButton5))
+                    .addGroup(layerMinumanLayout.createSequentialGroup()
+                        .addComponent(jRadioButton1)
                         .addGap(18, 18, 18)
-                        .addComponent(jRadioButton14)
+                        .addComponent(jRadioButton2)
                         .addGap(18, 18, 18)
-                        .addComponent(jRadioButton15)
+                        .addComponent(jRadioButton3))
+                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layerMinumanLayout.createSequentialGroup()
+                        .addComponent(jCheckBox7, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jRadioButton16))
-                    .addComponent(jLabel7))
-                .addContainerGap(132, Short.MAX_VALUE))
+                        .addComponent(jCheckBox8, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jCheckBox9, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jCheckBox10, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel11))
+                .addContainerGap(229, Short.MAX_VALUE))
         );
         layerMinumanLayout.setVerticalGroup(
             layerMinumanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layerMinumanLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layerMinumanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox7)
+                    .addComponent(jCheckBox8)
+                    .addComponent(jCheckBox9)
+                    .addComponent(jCheckBox10))
+                .addGap(28, 28, 28)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layerMinumanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton12)
-                    .addComponent(jRadioButton11)
-                    .addComponent(jRadioButton13)
-                    .addComponent(jRadioButton14)
-                    .addComponent(jRadioButton15)
-                    .addComponent(jRadioButton16))
-                .addContainerGap(365, Short.MAX_VALUE))
+                    .addComponent(jRadioButton1)
+                    .addComponent(jRadioButton2)
+                    .addComponent(jRadioButton3))
+                .addGap(28, 28, 28)
+                .addComponent(jLabel10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layerMinumanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton4)
+                    .addComponent(jRadioButton5))
+                .addGap(28, 28, 28)
+                .addComponent(jLabel11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layerMinumanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton6)
+                    .addComponent(jRadioButton11))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28))
         );
 
         jLayeredPane1.add(layerMinuman, "card3");
+
+        jButton1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jButton1.setText("Cek Rekomendasi");
 
         javax.swing.GroupLayout bgLayout = new javax.swing.GroupLayout(bg);
         bg.setLayout(bgLayout);
@@ -300,21 +385,25 @@ public class Recomendation extends javax.swing.JFrame {
             bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(bgLayout.createSequentialGroup()
                 .addGap(83, 83, 83)
-                .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 599, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton1)
+                    .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 599, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(118, Short.MAX_VALUE))
         );
         bgLayout.setVerticalGroup(
             bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(bgLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
+                .addGap(45, 45, 45)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24)
-                .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 489, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45)
+                .addComponent(jButton1)
                 .addContainerGap())
         );
 
@@ -390,24 +479,36 @@ public class Recomendation extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bg;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCheckBox10;
+    private javax.swing.JCheckBox jCheckBox2;
+    private javax.swing.JCheckBox jCheckBox3;
+    private javax.swing.JCheckBox jCheckBox4;
+    private javax.swing.JCheckBox jCheckBox5;
+    private javax.swing.JCheckBox jCheckBox6;
+    private javax.swing.JCheckBox jCheckBox7;
+    private javax.swing.JCheckBox jCheckBox8;
+    private javax.swing.JCheckBox jCheckBox9;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton10;
     private javax.swing.JRadioButton jRadioButton11;
-    private javax.swing.JRadioButton jRadioButton12;
-    private javax.swing.JRadioButton jRadioButton13;
-    private javax.swing.JRadioButton jRadioButton14;
-    private javax.swing.JRadioButton jRadioButton15;
-    private javax.swing.JRadioButton jRadioButton16;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JRadioButton jRadioButton4;
@@ -417,11 +518,13 @@ public class Recomendation extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton8;
     private javax.swing.JRadioButton jRadioButton9;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     private javax.swing.JPanel layerMakanan;
     private javax.swing.JPanel layerMinuman;
-    private javax.swing.ButtonGroup rasaMakanan;
-    private javax.swing.ButtonGroup rasaMinuman;
     private javax.swing.ButtonGroup shtMakanan;
+    private javax.swing.ButtonGroup sizeMinuman;
+    private javax.swing.ButtonGroup ynEs;
+    private javax.swing.ButtonGroup ynKafein;
     private javax.swing.ButtonGroup ynMakanan;
     // End of variables declaration//GEN-END:variables
 }
