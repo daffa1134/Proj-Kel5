@@ -1,6 +1,6 @@
 package Method;
-import java.util.ArrayList;
 
+import java.util.ArrayList;
 
 public class Makanan {
     private final String nama;
@@ -51,4 +51,5 @@ public class Makanan {
     public String getNegara() {
         return this.negara;
     }
+
 }

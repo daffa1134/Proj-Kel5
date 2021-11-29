@@ -1,9 +1,11 @@
+package Method;
+
 public class Minuman{
     private String ukuran;
     private String suhu;
     private boolean cafein;
 
-    public Minuman (String nama, int harga, String jenis, String tag, String negara){
+    public Minuman(String nama, int harga, String jenis, String tag, String negara){
         this.ukuran = ukuran;
         this.suhu = suhu;
         this.cafein = cafein;
@@ -22,7 +24,7 @@ public class Minuman{
         return this.cafein;
     }
 
-    public string getUkuran(){
+    public String getUkuran(){
         return this.ukuran;
     }
 
