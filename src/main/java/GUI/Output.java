@@ -27,27 +27,53 @@ public class Output extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
         outtext = new javax.swing.JTextArea();
+        backRec = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Result");
+        setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 214));
 
         outtext.setEditable(false);
+        outtext.setBackground(new java.awt.Color(255, 255, 214));
         outtext.setColumns(20);
-        outtext.setRows(20);
-        jScrollPane1.setViewportView(outtext);
+        outtext.setFont(new java.awt.Font("Goudy Old Style", 0, 18)); // NOI18N
+        outtext.setRows(15);
+        outtext.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+
+        backRec.setBackground(new java.awt.Color(255, 255, 255));
+        backRec.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        backRec.setText("<");
+        backRec.setToolTipText("click to get recommendation");
+        backRec.setBorderPainted(false);
+        backRec.setContentAreaFilled(false);
+        backRec.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        backRec.setPreferredSize(new java.awt.Dimension(20, 20));
+        backRec.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backRecActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+            .addComponent(outtext, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 561, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(backRec, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addComponent(outtext, javax.swing.GroupLayout.DEFAULT_SIZE, 449, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(backRec, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -64,13 +90,20 @@ public class Output extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void backRecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backRecActionPerformed
+        // TODO add your handling code here:
+        Recommendation r = new Recommendation();
+        r.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_backRecActionPerformed
+
     public void setTeks(String text) {
         outtext.setText(text);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton backRec;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea outtext;
     // End of variables declaration//GEN-END:variables
 }
