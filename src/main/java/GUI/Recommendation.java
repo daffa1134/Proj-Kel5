@@ -7,7 +7,9 @@ package GUI;
 import javax.swing.JPanel;
 import Method.DaftarMenu;
 import Method.Makanan;
+import Method.Minuman;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -16,7 +18,8 @@ import java.util.ArrayList;
 public class Recommendation extends javax.swing.JFrame {
 
     static DaftarMenu menu = new DaftarMenu();
-    static ArrayList<Makanan> rekom = new ArrayList<>();
+    static ArrayList<Makanan> rekomMakan = new ArrayList<>();
+    static ArrayList<Minuman> rekomMinum = new ArrayList<>();
     /**
      * Creates new form Recommendation
      */
@@ -59,29 +62,30 @@ public class Recommendation extends javax.swing.JFrame {
         junkF = new javax.swing.JRadioButton();
         jLabel6 = new javax.swing.JLabel();
         negaraMkn = new javax.swing.JComboBox<>();
+        jLabel13 = new javax.swing.JLabel();
         layerMinuman = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        jCheckBox7 = new javax.swing.JCheckBox();
-        jCheckBox8 = new javax.swing.JCheckBox();
-        jCheckBox9 = new javax.swing.JCheckBox();
-        jCheckBox10 = new javax.swing.JCheckBox();
+        manisMnum = new javax.swing.JCheckBox();
+        milk = new javax.swing.JCheckBox();
+        pahit = new javax.swing.JCheckBox();
         jLabel8 = new javax.swing.JLabel();
         mnumMoney = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
+        kecil = new javax.swing.JRadioButton();
+        sedang = new javax.swing.JRadioButton();
+        besar = new javax.swing.JRadioButton();
         jLabel10 = new javax.swing.JLabel();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
+        panas = new javax.swing.JRadioButton();
+        dingin = new javax.swing.JRadioButton();
         jLabel11 = new javax.swing.JLabel();
-        jRadioButton6 = new javax.swing.JRadioButton();
-        jRadioButton11 = new javax.swing.JRadioButton();
+        caffein = new javax.swing.JRadioButton();
+        nonCaffein = new javax.swing.JRadioButton();
         jLabel12 = new javax.swing.JLabel();
         negaraMnum = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
+        cekRekomendasi = new javax.swing.JButton();
+        nextTag = new javax.swing.JButton();
+        backHome = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -109,104 +113,136 @@ public class Recommendation extends javax.swing.JFrame {
 
         jLayeredPane1.setLayout(new java.awt.CardLayout());
 
-        layerMakanan.setBackground(new java.awt.Color(255, 255, 255));
+        layerMakanan.setBackground(new java.awt.Color(255, 222, 173));
+        layerMakanan.setPreferredSize(new java.awt.Dimension(600, 480));
+        layerMakanan.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel2.setText("Pilih rasa yang anda inginkan:");
+        layerMakanan.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 25, -1, -1));
 
         manis.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         manis.setText("Manis");
+        manis.setContentAreaFilled(false);
         manis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 manisActionPerformed(evt);
             }
         });
+        layerMakanan.add(manis, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 48, 71, -1));
 
         asam.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         asam.setText("Asam");
+        asam.setContentAreaFilled(false);
         asam.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 asamActionPerformed(evt);
             }
         });
+        layerMakanan.add(asam, new org.netbeans.lib.awtextra.AbsoluteConstraints(122, 48, 71, -1));
 
         asin.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         asin.setText("Asin");
+        asin.setContentAreaFilled(false);
         asin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 asinActionPerformed(evt);
             }
         });
+        layerMakanan.add(asin, new org.netbeans.lib.awtextra.AbsoluteConstraints(211, 48, 71, -1));
 
         pedas.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         pedas.setText("Pedas");
+        pedas.setContentAreaFilled(false);
         pedas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pedasActionPerformed(evt);
             }
         });
+        layerMakanan.add(pedas, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 48, 71, -1));
 
         gurih.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         gurih.setText("Gurih");
+        gurih.setContentAreaFilled(false);
         gurih.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 gurihActionPerformed(evt);
             }
         });
+        layerMakanan.add(gurih, new org.netbeans.lib.awtextra.AbsoluteConstraints(389, 48, 71, -1));
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel3.setText("Jumlah uang yang anda miliki:");
+        layerMakanan.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 101, 236, -1));
 
+        mknMoney.setToolTipText("");
+        mknMoney.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mknMoneyClicked(evt);
+            }
+        });
         mknMoney.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mknMoneyActionPerformed(evt);
             }
         });
+        layerMakanan.add(mknMoney, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 133, 169, -1));
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel4.setText("Apakah anda seorang vegetarian?");
+        layerMakanan.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 180, -1, -1));
 
         ynMakanan.add(vegan);
         vegan.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         vegan.setText("Ya");
+        vegan.setContentAreaFilled(false);
         vegan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 veganActionPerformed(evt);
             }
         });
+        layerMakanan.add(vegan, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 208, -1, -1));
 
         ynMakanan.add(nonVegan);
         nonVegan.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         nonVegan.setText("Tidak");
+        nonVegan.setContentAreaFilled(false);
         nonVegan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nonVeganActionPerformed(evt);
             }
         });
+        layerMakanan.add(nonVegan, new org.netbeans.lib.awtextra.AbsoluteConstraints(94, 208, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel5.setText("Pilih tipe makanan yang anda sukai:");
+        layerMakanan.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 261, 280, -1));
 
         shtMakanan.add(healtyF);
         healtyF.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         healtyF.setText("Healthy Food");
+        healtyF.setContentAreaFilled(false);
         healtyF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 healtyFActionPerformed(evt);
             }
         });
+        layerMakanan.add(healtyF, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 289, -1, -1));
 
         shtMakanan.add(junkF);
         junkF.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         junkF.setText("Junk Food");
+        junkF.setContentAreaFilled(false);
         junkF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 junkFActionPerformed(evt);
             }
         });
+        layerMakanan.add(junkF, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 289, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel6.setText("Pilih asal negara produk:");
+        layerMakanan.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 342, 252, -1));
 
         negaraMkn.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         negaraMkn.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tampilkan Semua", "China", "Indonesia", "Italia", "Mesir" }));
@@ -215,137 +251,145 @@ public class Recommendation extends javax.swing.JFrame {
                 negaraMknActionPerformed(evt);
             }
         });
+        layerMakanan.add(negaraMkn, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 369, 160, -1));
 
-        javax.swing.GroupLayout layerMakananLayout = new javax.swing.GroupLayout(layerMakanan);
-        layerMakanan.setLayout(layerMakananLayout);
-        layerMakananLayout.setHorizontalGroup(
-            layerMakananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layerMakananLayout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addGroup(layerMakananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layerMakananLayout.createSequentialGroup()
-                        .addComponent(manis, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(asam, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(asin, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(pedas, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(gurih, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layerMakananLayout.createSequentialGroup()
-                        .addComponent(healtyF)
-                        .addGap(18, 18, 18)
-                        .addComponent(junkF))
-                    .addGroup(layerMakananLayout.createSequentialGroup()
-                        .addComponent(vegan)
-                        .addGap(18, 18, 18)
-                        .addComponent(nonVegan))
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4)
-                    .addComponent(mknMoney, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(negaraMkn, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(139, Short.MAX_VALUE))
-        );
-        layerMakananLayout.setVerticalGroup(
-            layerMakananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layerMakananLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layerMakananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(manis)
-                    .addComponent(asam)
-                    .addComponent(asin)
-                    .addComponent(pedas)
-                    .addComponent(gurih))
-                .addGap(28, 28, 28)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(mknMoney, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layerMakananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(vegan)
-                    .addComponent(nonVegan))
-                .addGap(28, 28, 28)
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layerMakananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(healtyF)
-                    .addComponent(junkF))
-                .addGap(28, 28, 28)
-                .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(negaraMkn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22))
-        );
+        jLabel13.setIcon(new javax.swing.ImageIcon("D:\\Kuliah\\GitHub\\Project_Kel5\\src\\main\\java\\Images\\mkn.png")); // NOI18N
+        layerMakanan.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 420, 350));
 
         jLayeredPane1.add(layerMakanan, "card2");
 
-        layerMinuman.setBackground(new java.awt.Color(153, 255, 255));
+        layerMinuman.setBackground(new java.awt.Color(100, 149, 237));
+        layerMinuman.setPreferredSize(new java.awt.Dimension(600, 480));
+        layerMinuman.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel7.setText("Pilih rasa yang anda inginkan:");
+        layerMinuman.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 25, -1, -1));
 
-        jCheckBox7.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jCheckBox7.setText("Manis");
+        manisMnum.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        manisMnum.setText("Manis");
+        manisMnum.setContentAreaFilled(false);
+        manisMnum.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                manisMnumActionPerformed(evt);
+            }
+        });
+        layerMinuman.add(manisMnum, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 48, 71, -1));
 
-        jCheckBox8.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jCheckBox8.setText("Asam");
+        milk.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        milk.setText("Milk");
+        milk.setContentAreaFilled(false);
+        milk.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                milkActionPerformed(evt);
+            }
+        });
+        layerMinuman.add(milk, new org.netbeans.lib.awtextra.AbsoluteConstraints(122, 48, 71, -1));
 
-        jCheckBox9.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jCheckBox9.setText("Asin");
-
-        jCheckBox10.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jCheckBox10.setText("Pahit");
+        pahit.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        pahit.setText("Pahit");
+        pahit.setContentAreaFilled(false);
+        pahit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pahitActionPerformed(evt);
+            }
+        });
+        layerMinuman.add(pahit, new org.netbeans.lib.awtextra.AbsoluteConstraints(211, 48, 70, -1));
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel8.setText("Jumlah uang yang anda miliki:");
+        layerMinuman.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 101, 236, -1));
+
+        mnumMoney.setToolTipText("Press enter after fill amount of money");
+        mnumMoney.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mnumMoneyClicked(evt);
+            }
+        });
+        mnumMoney.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnumMoneyActionPerformed(evt);
+            }
+        });
+        layerMinuman.add(mnumMoney, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 132, 169, -1));
 
         jLabel9.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel9.setText("Pilih ukuran minuman:");
+        layerMinuman.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 179, -1, -1));
 
-        sizeMinuman.add(jRadioButton1);
-        jRadioButton1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jRadioButton1.setText("Kecil");
+        sizeMinuman.add(kecil);
+        kecil.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        kecil.setText("Kecil");
+        kecil.setContentAreaFilled(false);
+        layerMinuman.add(kecil, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 206, -1, -1));
 
-        sizeMinuman.add(jRadioButton2);
-        jRadioButton2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jRadioButton2.setText("Sedang");
+        sizeMinuman.add(sedang);
+        sedang.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        sedang.setText("Sedang");
+        sedang.setContentAreaFilled(false);
+        layerMinuman.add(sedang, new org.netbeans.lib.awtextra.AbsoluteConstraints(106, 206, -1, -1));
 
-        sizeMinuman.add(jRadioButton3);
-        jRadioButton3.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jRadioButton3.setText("Besar");
+        sizeMinuman.add(besar);
+        besar.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        besar.setText("Besar");
+        besar.setContentAreaFilled(false);
+        layerMinuman.add(besar, new org.netbeans.lib.awtextra.AbsoluteConstraints(191, 206, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jLabel10.setText("Tambahkan es?");
+        jLabel10.setText("Jenis minuman:");
+        layerMinuman.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 259, -1, -1));
 
-        ynEs.add(jRadioButton4);
-        jRadioButton4.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jRadioButton4.setText("Boleh");
+        ynEs.add(panas);
+        panas.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        panas.setText("Panas");
+        panas.setContentAreaFilled(false);
+        panas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                panasActionPerformed(evt);
+            }
+        });
+        layerMinuman.add(panas, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 282, -1, -1));
 
-        ynEs.add(jRadioButton5);
-        jRadioButton5.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jRadioButton5.setText("Hangat Saja");
+        ynEs.add(dingin);
+        dingin.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        dingin.setText("Dingin");
+        dingin.setContentAreaFilled(false);
+        dingin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dinginActionPerformed(evt);
+            }
+        });
+        layerMinuman.add(dingin, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 282, -1, -1));
 
         jLabel11.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel11.setText("Mengandung kafein?");
+        layerMinuman.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 335, -1, -1));
 
-        ynKafein.add(jRadioButton6);
-        jRadioButton6.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jRadioButton6.setText("Ya");
+        ynKafein.add(caffein);
+        caffein.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        caffein.setText("Ya");
+        caffein.setContentAreaFilled(false);
+        caffein.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                caffeinActionPerformed(evt);
+            }
+        });
+        layerMinuman.add(caffein, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 358, -1, -1));
 
-        ynKafein.add(jRadioButton11);
-        jRadioButton11.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jRadioButton11.setText("Tidak");
+        ynKafein.add(nonCaffein);
+        nonCaffein.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        nonCaffein.setText("Tidak");
+        nonCaffein.setContentAreaFilled(false);
+        nonCaffein.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nonCaffeinActionPerformed(evt);
+            }
+        });
+        layerMinuman.add(nonCaffein, new org.netbeans.lib.awtextra.AbsoluteConstraints(94, 358, -1, -1));
 
         jLabel12.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel12.setText("Pilih asal negara produk:");
+        layerMinuman.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 411, 252, -1));
 
         negaraMnum.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         negaraMnum.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tampilkan Semua", "Jepang", "Malaysia", "Thailand" }));
@@ -354,131 +398,55 @@ public class Recommendation extends javax.swing.JFrame {
                 negaraMnumActionPerformed(evt);
             }
         });
+        layerMinuman.add(negaraMnum, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 438, 160, -1));
 
-        javax.swing.GroupLayout layerMinumanLayout = new javax.swing.GroupLayout(layerMinuman);
-        layerMinuman.setLayout(layerMinumanLayout);
-        layerMinumanLayout.setHorizontalGroup(
-            layerMinumanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layerMinumanLayout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addGroup(layerMinumanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(negaraMnum, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layerMinumanLayout.createSequentialGroup()
-                        .addComponent(jRadioButton6)
-                        .addGap(18, 18, 18)
-                        .addComponent(jRadioButton11))
-                    .addGroup(layerMinumanLayout.createSequentialGroup()
-                        .addComponent(jRadioButton4)
-                        .addGap(18, 18, 18)
-                        .addComponent(jRadioButton5))
-                    .addGroup(layerMinumanLayout.createSequentialGroup()
-                        .addComponent(jRadioButton1)
-                        .addGap(18, 18, 18)
-                        .addComponent(jRadioButton2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jRadioButton3))
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(mnumMoney, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layerMinumanLayout.createSequentialGroup()
-                        .addComponent(jCheckBox7, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jCheckBox8, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jCheckBox9, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jCheckBox10, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel9)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel11))
-                .addContainerGap(229, Short.MAX_VALUE))
-        );
-        layerMinumanLayout.setVerticalGroup(
-            layerMinumanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layerMinumanLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layerMinumanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox7)
-                    .addComponent(jCheckBox8)
-                    .addComponent(jCheckBox9)
-                    .addComponent(jCheckBox10))
-                .addGap(28, 28, 28)
-                .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(mnumMoney, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layerMinumanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton3))
-                .addGap(28, 28, 28)
-                .addComponent(jLabel10)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layerMinumanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton4)
-                    .addComponent(jRadioButton5))
-                .addGap(28, 28, 28)
-                .addComponent(jLabel11)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layerMinumanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton6)
-                    .addComponent(jRadioButton11))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel12)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(negaraMnum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28))
-        );
+        jLabel15.setIcon(new javax.swing.ImageIcon("D:\\Kuliah\\GitHub\\Project_Kel5\\src\\main\\java\\Images\\mnm.png")); // NOI18N
+        layerMinuman.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 360, 330));
 
         jLayeredPane1.add(layerMinuman, "card3");
 
         bg.add(jLayeredPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 123, -1, 489));
 
-        jButton1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jButton1.setText("Cek Rekomendasi");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        cekRekomendasi.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        cekRekomendasi.setText("Cek Rekomendasi");
+        cekRekomendasi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                cekRekomendasiActionPerformed(evt);
             }
         });
-        bg.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(545, 657, -1, -1));
+        bg.add(cekRekomendasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(545, 657, -1, -1));
 
-        jButton4.setBackground(new java.awt.Color(255, 255, 255));
-        jButton4.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText(">");
-        jButton4.setToolTipText("click to get recommendation");
-        jButton4.setBorderPainted(false);
-        jButton4.setContentAreaFilled(false);
-        jButton4.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jButton4.setPreferredSize(new java.awt.Dimension(20, 20));
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        nextTag.setBackground(new java.awt.Color(255, 255, 255));
+        nextTag.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        nextTag.setForeground(new java.awt.Color(255, 255, 255));
+        nextTag.setText(">");
+        nextTag.setToolTipText("click to get tag list");
+        nextTag.setBorderPainted(false);
+        nextTag.setContentAreaFilled(false);
+        nextTag.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        nextTag.setPreferredSize(new java.awt.Dimension(20, 20));
+        nextTag.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                nextTagActionPerformed(evt);
             }
         });
-        bg.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 760, 30, 30));
+        bg.add(nextTag, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 760, 30, 30));
 
-        jButton5.setBackground(new java.awt.Color(255, 255, 255));
-        jButton5.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("<");
-        jButton5.setToolTipText("click to get recommendation");
-        jButton5.setBorderPainted(false);
-        jButton5.setContentAreaFilled(false);
-        jButton5.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        jButton5.setPreferredSize(new java.awt.Dimension(20, 20));
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        backHome.setBackground(new java.awt.Color(255, 255, 255));
+        backHome.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        backHome.setForeground(new java.awt.Color(255, 255, 255));
+        backHome.setText("<");
+        backHome.setToolTipText("click to return to menu");
+        backHome.setBorderPainted(false);
+        backHome.setContentAreaFilled(false);
+        backHome.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        backHome.setPreferredSize(new java.awt.Dimension(20, 20));
+        backHome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                backHomeActionPerformed(evt);
             }
         });
-        bg.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 760, 30, 30));
+        bg.add(backHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 760, 30, 30));
 
         jLabel14.setIcon(new javax.swing.ImageIcon("D:\\Kuliah\\GitHub\\Project_Kel5\\src\\main\\java\\Images\\bg.jpg")); // NOI18N
         bg.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 800));
@@ -508,15 +476,15 @@ public class Recommendation extends javax.swing.JFrame {
 
     private void junkFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_junkFActionPerformed
         // TODO add your handling code here:
-        if(rekom.isEmpty()) {
+        if(rekomMakan.isEmpty()) {
             addMenuMakan();
         }
-        int loop = rekom.size();
+        int loop = rekomMakan.size();
         int i = 0;
         while(i <= loop) {
-            if(rekom.get(i).getHealty()) {
-            rekom.remove(i);
-            loop = rekom.size();
+            if(rekomMakan.get(i).getHealty()) {
+            rekomMakan.remove(i);
+            loop = rekomMakan.size();
             i = 0;
             } else {
             i++;
@@ -524,142 +492,154 @@ public class Recommendation extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_junkFActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void nextTagActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextTagActionPerformed
         // TODO add your handling code here:
-        dispose();
-    }//GEN-LAST:event_jButton4ActionPerformed
+        DaftarTag dt = new DaftarTag();
+        dt.setVisible(true);
+    }//GEN-LAST:event_nextTagActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void backHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backHomeActionPerformed
         // TODO add your handling code here:
         Home h = new Home();
         h.setVisible(true);
         dispose();
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_backHomeActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void cekRekomendasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cekRekomendasiActionPerformed
         // TODO add your handling code here:
         Output out = new Output();
-        String pmbuka = "Berikut makanan yang kami rekomendasikan: \n";
-        if(choose.getSelectedItem().equals("Makanan")) {
-        int jlh = rekom.size();
-        if (jlh == 1) {
-            out.setTeks(pmbuka +
-                        rekom.get(0).getNama());
-        } else if (jlh == 2) {
-            out.setTeks(pmbuka +
-                        rekom.get(0).getNama() + "\n" +
-                        rekom.get(1).getNama());
-        } else if (jlh == 3) {
-            out.setTeks(pmbuka +
-                        rekom.get(0).getNama() + "\n" +
-                        rekom.get(1).getNama() + "\n" + 
-                        rekom.get(2).getNama());
-        } else if (jlh == 4) {
-            out.setTeks(pmbuka +
-                        rekom.get(0).getNama() + "\n" +
-                        rekom.get(1).getNama() + "\n" +
-                        rekom.get(2).getNama() + "\n" +
-                        rekom.get(3).getNama());
+      
+        if(choose.getSelectedItem().equals("Makanan")) {   
+            cekSamaMakan();
+            int jlh = rekomMakan.size();
+            String pmbuka = "Berikut makanan yang kami rekomendasikan: \n\n";
+            if (jlh == 1) {
+                out.setTeks(pmbuka +
+                            rekomMakan.get(0).getNama());
+            } else if (jlh == 2) {
+                out.setTeks(pmbuka +
+                            rekomMakan.get(0).getNama() + "\n" +
+                            rekomMakan.get(1).getNama());
+            } else if (jlh == 3) {
+                out.setTeks(pmbuka +
+                            rekomMakan.get(0).getNama() + "\n" +
+                            rekomMakan.get(1).getNama() + "\n" + 
+                            rekomMakan.get(2).getNama());
+            } else if (jlh == 4) {
+                out.setTeks(pmbuka +
+                            rekomMakan.get(0).getNama() + "\n" +
+                            rekomMakan.get(1).getNama() + "\n" +
+                            rekomMakan.get(2).getNama() + "\n" +
+                            rekomMakan.get(3).getNama());
+            } else {
+                out.setTeks("Maaf tidak ada rekomendasi yang sesuai dengan budget atau selera anda :(");
+            }
+            rekomMakan.clear();
         } else {
-            out.setTeks("Maaf tidak ada rekomendasi yang sesuai dengan budget atau selera anda :(");
-        }
-        } else {
-            out.setTeks("Kepala bapakkau");
+            String pmbuka = "Berikut minuman yang kami rekomendasikan: \n\n";
+            cekSamaMinum();
+            int jlh = rekomMinum.size();
+            if (jlh == 1) {
+                out.setTeks(pmbuka +
+                            rekomMinum.get(0).getNama());
+            } else if (jlh == 2) {
+                out.setTeks(pmbuka +
+                            rekomMinum.get(0).getNama() + "\n" +
+                            rekomMinum.get(1).getNama());
+            } else if (jlh == 3) {
+                out.setTeks(pmbuka +
+                            rekomMinum.get(0).getNama() + "\n" +
+                            rekomMinum.get(1).getNama() + "\n" + 
+                            rekomMinum.get(2).getNama());
+            } else {
+                out.setTeks("Maaf tidak ada rekomendasi yang sesuai dengan budget atau selera anda :(");
+            }
+            rekomMinum.clear();
         }
         out.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+        dispose();
+    }//GEN-LAST:event_cekRekomendasiActionPerformed
 
     private void veganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_veganActionPerformed
         // TODO add your handling code here:
-        if(rekom.isEmpty()) {
+        if(rekomMakan.isEmpty()) {
             addMenuMakan();
         }
-        int loop = rekom.size();
+        int loop = rekomMakan.size();
         int i = 0;        
         while(i <= loop) {
-            if(rekom.get(i).getVegan()) {
+            if(rekomMakan.get(i).getVegan()) {
                 i++;
             } else {
-                rekom.remove(i);
-                loop = rekom.size();
+                rekomMakan.remove(i);
+                loop = rekomMakan.size();
                 i = 0; 
             }
-            
         }
     }//GEN-LAST:event_veganActionPerformed
 
     private void manisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manisActionPerformed
         // TODO add your handling code here:
-        if(manis.isSelected()) {
-            rekom.add(menu.getSpaghetti());
-            rekom.add(menu.getRotiDaging());
-        }
+        rekomMakan.add(menu.getSpaghetti());
+        rekomMakan.add(menu.getRotiDaging());
     }//GEN-LAST:event_manisActionPerformed
 
     private void asamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asamActionPerformed
         // TODO add your handling code here:
-        if(asam.isSelected()) {
-            rekom.add(menu.getSpaghetti());
-            rekom.add(menu.getNasGor());
-            rekom.add(menu.getRotiDaging());
-            rekom.add(menu.getKofta());
-        }
+        addMenuMakan();
     }//GEN-LAST:event_asamActionPerformed
 
     private void asinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asinActionPerformed
         // TODO add your handling code here:
-        if(asin.isSelected()) {
-            rekom.add(menu.getSpaghetti());
-        }
+        rekomMakan.add(menu.getNasGor());
     }//GEN-LAST:event_asinActionPerformed
 
     private void pedasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pedasActionPerformed
         // TODO add your handling code here:
         if(pedas.isSelected()) {
-            rekom.add(menu.getSpaghetti());
-            rekom.add(menu.getKofta());
+            rekomMakan.add(menu.getSpaghetti());
+            rekomMakan.add(menu.getKofta());
         }
     }//GEN-LAST:event_pedasActionPerformed
 
     private void gurihActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gurihActionPerformed
         // TODO add your handling code here:
         if(gurih.isSelected()) {
-            rekom.add(menu.getNasGor());
+            rekomMakan.add(menu.getNasGor());
         }
     }//GEN-LAST:event_gurihActionPerformed
 
     private void mknMoneyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mknMoneyActionPerformed
         // TODO add your handling code here:
-        if(rekom.isEmpty()) {
+        if(rekomMakan.isEmpty()) {
             addMenuMakan();
         }
         
         int money = Integer.parseInt(mknMoney.getText());
-        int loop = rekom.size();
+        int loop = rekomMakan.size();
         int i = 0;
         while(i <= loop) {
-            if(money < rekom.get(i).getHarga()) {
-                rekom.remove(i);
-                loop = rekom.size();
+            if(money < rekomMakan.get(i).getHarga()) {
+                rekomMakan.remove(i);
+                loop = rekomMakan.size();
                 i = 0;
             } else {
                 i++;
             }
         }
-        
     }//GEN-LAST:event_mknMoneyActionPerformed
 
     private void nonVeganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nonVeganActionPerformed
         // TODO add your handling code here:
-        if(rekom.isEmpty()) {
+        if(rekomMakan.isEmpty()) {
             addMenuMakan();
         }
-        int loop = rekom.size();
+        int loop = rekomMakan.size();
         int i = 0;
         while(i <= loop) {
-            if(rekom.get(i).getVegan()) {
-                rekom.remove(i);
-                loop = rekom.size();
+            if(rekomMakan.get(i).getVegan()) {
+                rekomMakan.remove(i);
+                loop = rekomMakan.size();
                 i = 0;
             } else {
                 i++;
@@ -669,17 +649,17 @@ public class Recommendation extends javax.swing.JFrame {
 
     private void healtyFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_healtyFActionPerformed
         // TODO add your handling code here:
-        if(rekom.isEmpty()) {
+        if(rekomMakan.isEmpty()) {
             addMenuMakan();
         }
-        int loop = rekom.size();
+        int loop = rekomMakan.size();
         int i = 0;
         while(i <= loop) {
-            if(rekom.get(i).getHealty()) {
+            if(rekomMakan.get(i).getHealty()) {
                 i++;
             } else {
-            rekom.remove(i);
-            loop = rekom.size();
+            rekomMakan.remove(i);
+            loop = rekomMakan.size();
             i = 0;
             }
         }
@@ -687,55 +667,55 @@ public class Recommendation extends javax.swing.JFrame {
 
     private void negaraMknActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_negaraMknActionPerformed
         // TODO add your handling code here:
-        if(rekom.isEmpty()) {
+        if(rekomMakan.isEmpty()) {
             addMenuMakan();
         }
         
         if (negaraMkn.getSelectedItem().equals("China")) {
-            int loop = rekom.size();
+            int loop = rekomMakan.size();
             int i = 0;
             while(i <= loop) {
-            if(rekom.get(i).getNegara().equalsIgnoreCase("China")) {
+            if(rekomMakan.get(i).getNegara().equalsIgnoreCase("China")) {
                 i++;
             } else {
-                rekom.remove(i);
-                loop = rekom.size();
+                rekomMakan.remove(i);
+                loop = rekomMakan.size();
                 i = 0;
             }
             }
         } else if (negaraMkn.getSelectedItem().equals("Indonesia")) {
-            int loop = rekom.size();
+            int loop = rekomMakan.size();
             int i = 0;
             while(i <= loop) {
-            if(rekom.get(i).getNegara().equalsIgnoreCase("Indonesia")) {
+            if(rekomMakan.get(i).getNegara().equalsIgnoreCase("Indonesia")) {
                 i++;
             } else {
-                rekom.remove(i);
-                loop = rekom.size();
+                rekomMakan.remove(i);
+                loop = rekomMakan.size();
                 i = 0;
             }
             }
         } else if (negaraMkn.getSelectedItem().equals("Italia")) {
-            int loop = rekom.size();
+            int loop = rekomMakan.size();
             int i = 0;
             while(i <= loop) {
-            if(rekom.get(i).getNegara().equalsIgnoreCase("Italia")) {
+            if(rekomMakan.get(i).getNegara().equalsIgnoreCase("Italia")) {
                 i++;
             } else {
-                rekom.remove(i);
-                loop = rekom.size();
+                rekomMakan.remove(i);
+                loop = rekomMakan.size();
                 i = 0;
             }
             }
         } else if(negaraMkn.getSelectedItem().equals("Mesir")) {
-            int loop = rekom.size();
+            int loop = rekomMakan.size();
             int i = 0;
             while(i <= loop) {
-            if(rekom.get(i).getNegara().equalsIgnoreCase("Mesir")) {
+            if(rekomMakan.get(i).getNegara().equalsIgnoreCase("Mesir")) {
                 i++;
             } else {
-                rekom.remove(i);
-                loop = rekom.size();
+                rekomMakan.remove(i);
+                loop = rekomMakan.size();
                 i = 0;
             }
             }
@@ -744,8 +724,167 @@ public class Recommendation extends javax.swing.JFrame {
 
     private void negaraMnumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_negaraMnumActionPerformed
         // TODO add your handling code here:
+        if(rekomMinum.isEmpty()) {
+            addMenuMinum();
+        }
         
+        if (negaraMnum.getSelectedItem().equals("Jepang")) {
+            int loop = rekomMinum.size();
+            int i = 0;
+            while(i <= loop) {
+            if(rekomMinum.get(i).getNegara().equalsIgnoreCase("Jepang")) {
+                i++;
+            } else {
+                rekomMinum.remove(i);
+                loop = rekomMinum.size();
+                i = 0;
+            }
+            }
+        } else if (negaraMnum.getSelectedItem().equals("Malaysia")) {
+            int loop = rekomMinum.size();
+            int i = 0;
+            while(i <= loop) {
+            if(rekomMinum.get(i).getNegara().equalsIgnoreCase("Malaysia")) {
+                i++;
+            } else {
+                rekomMinum.remove(i);
+                loop = rekomMinum.size();
+                i = 0;
+            }
+            }
+        } else if (negaraMnum.getSelectedItem().equals("Thailand")) {
+            int loop = rekomMinum.size();
+            int i = 0;
+            while(i <= loop) {
+            if(rekomMinum.get(i).getNegara().equalsIgnoreCase("Thailand")) {
+                i++;
+            } else {
+                rekomMinum.remove(i);
+                loop = rekomMinum.size();
+                i = 0;
+            }
+            }
+        }
     }//GEN-LAST:event_negaraMnumActionPerformed
+
+    private void manisMnumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manisMnumActionPerformed
+        // TODO add your handling code here:
+        rekomMinum.add(menu.getIceABCD());
+        rekomMinum.add(menu.getThaiTea());
+    }//GEN-LAST:event_manisMnumActionPerformed
+
+    private void milkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_milkActionPerformed
+        // TODO add your handling code here:
+        rekomMinum.add(menu.getIceABCD());
+        rekomMinum.add(menu.getThaiTea());
+    }//GEN-LAST:event_milkActionPerformed
+
+    private void pahitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pahitActionPerformed
+        // TODO add your handling code here:
+        rekomMinum.add(menu.getOcha());
+    }//GEN-LAST:event_pahitActionPerformed
+
+    private void mnumMoneyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnumMoneyActionPerformed
+        // TODO add your handling code here:
+        if(rekomMinum.isEmpty()) {
+            addMenuMinum();
+        }
+        
+        int money = Integer.parseInt(mnumMoney.getText());
+        int loop = rekomMinum.size();
+        int i = 0;
+        while(i <= loop) {
+            if(money < rekomMinum.get(i).getHarga()) {
+                rekomMinum.remove(i);
+                loop = rekomMinum.size();
+                i = 0;
+            } else {
+                i++;
+            }
+        }
+    }//GEN-LAST:event_mnumMoneyActionPerformed
+
+    private void panasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_panasActionPerformed
+        // TODO add your handling code here:
+        if(rekomMinum.isEmpty()) {
+            addMenuMinum();
+        }
+        int loop = rekomMinum.size();
+        int i = 0;
+        while(i <= loop) {
+            if(rekomMinum.get(i).getDingin()) {
+            rekomMinum.remove(i);
+            loop = rekomMinum.size();
+            i = 0;
+            } else {
+            i++;
+            }
+        }
+    }//GEN-LAST:event_panasActionPerformed
+
+    private void dinginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dinginActionPerformed
+        // TODO add your handling code here:
+        if(rekomMinum.isEmpty()) {
+            addMenuMinum();
+        }
+        int loop = rekomMinum.size();
+        int i = 0;        
+        while(i <= loop) {
+            if(rekomMinum.get(i).getDingin()) {
+                i++;
+            } else {
+                rekomMinum.remove(i);
+                loop = rekomMinum.size();
+                i = 0; 
+            }
+        }
+    }//GEN-LAST:event_dinginActionPerformed
+
+    private void caffeinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_caffeinActionPerformed
+        // TODO add your handling code here:
+        if(rekomMinum.isEmpty()) {
+            addMenuMinum();
+        }
+        int loop = rekomMinum.size();
+        int i = 0;        
+        while(i <= loop) {
+            if(rekomMinum.get(i).getCaffein()) {
+                i++;
+            } else {
+                rekomMinum.remove(i);
+                loop = rekomMinum.size();
+                i = 0; 
+            }
+        }
+    }//GEN-LAST:event_caffeinActionPerformed
+
+    private void nonCaffeinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nonCaffeinActionPerformed
+        // TODO add your handling code here:
+        if(rekomMinum.isEmpty()) {
+            addMenuMinum();
+        }
+        int loop = rekomMinum.size();
+        int i = 0;
+        while(i <= loop) {
+            if(rekomMinum.get(i).getCaffein()) {
+            rekomMinum.remove(i);
+            loop = rekomMinum.size();
+            i = 0;
+            } else {
+            i++;
+            }
+        }
+    }//GEN-LAST:event_nonCaffeinActionPerformed
+
+    private void mknMoneyClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mknMoneyClicked
+        // TODO add your handling code here:
+        clickMoneyArea();
+    }//GEN-LAST:event_mknMoneyClicked
+
+    private void mnumMoneyClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mnumMoneyClicked
+        // TODO add your handling code here:
+        clickMoneyArea();
+    }//GEN-LAST:event_mnumMoneyClicked
 
     // Berpindah panel
     private void switchPane(JPanel panel) {
@@ -756,32 +895,62 @@ public class Recommendation extends javax.swing.JFrame {
     }
     
     private void addMenuMakan() {
-        rekom.add(menu.getSpaghetti());
-        rekom.add(menu.getNasGor());
-        rekom.add(menu.getRotiDaging());
-        rekom.add(menu.getKofta());
+        rekomMakan.add(menu.getSpaghetti());
+        rekomMakan.add(menu.getNasGor());
+        rekomMakan.add(menu.getRotiDaging());
+        rekomMakan.add(menu.getKofta());
     }
     
+    private void addMenuMinum() {
+        rekomMinum.add(menu.getOcha());
+        rekomMinum.add(menu.getIceABCD());
+        rekomMinum.add(menu.getThaiTea());
+    }
+    
+    private void cekSamaMakan() {
+        for(int i = 0; i < rekomMakan.size()-1; i++) {
+            for(int j = i; j < rekomMakan.size()-1; j++) {
+                if(rekomMakan.get(i).equals(rekomMakan.get(j+1))) {
+                    rekomMakan.remove(i);
+                }
+            }
+        }
+    }
+    
+    private void cekSamaMinum() {
+        for(int i = 0; i < rekomMinum.size()-1; i++) {
+            for(int j = i; j < rekomMinum.size()-1; j++) {
+                if(rekomMinum.get(i).equals(rekomMinum.get(j+1))) {
+                    rekomMinum.remove(i);
+                }
+            }
+        }
+    }
+    
+    private void clickMoneyArea() {
+        JOptionPane.showMessageDialog(this,"Press enter after fill amount of money");
+        JOptionPane.getRootFrame().dispose();
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox asam;
     private javax.swing.JCheckBox asin;
+    private javax.swing.JButton backHome;
+    private javax.swing.JRadioButton besar;
     private javax.swing.JPanel bg;
+    private javax.swing.JRadioButton caffein;
+    private javax.swing.JButton cekRekomendasi;
     private javax.swing.JComboBox<String> choose;
+    private javax.swing.JRadioButton dingin;
     private javax.swing.JCheckBox gurih;
     private javax.swing.JRadioButton healtyF;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JCheckBox jCheckBox10;
-    private javax.swing.JCheckBox jCheckBox7;
-    private javax.swing.JCheckBox jCheckBox8;
-    private javax.swing.JCheckBox jCheckBox9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -791,23 +960,24 @@ public class Recommendation extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLayeredPane jLayeredPane1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton11;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
     private javax.swing.JRadioButton junkF;
+    private javax.swing.JRadioButton kecil;
     private javax.swing.JPanel layerMakanan;
     private javax.swing.JPanel layerMinuman;
     private javax.swing.JCheckBox manis;
+    private javax.swing.JCheckBox manisMnum;
+    private javax.swing.JCheckBox milk;
     private javax.swing.JTextField mknMoney;
     private javax.swing.JTextField mnumMoney;
     private javax.swing.JComboBox<String> negaraMkn;
     private javax.swing.JComboBox<String> negaraMnum;
+    private javax.swing.JButton nextTag;
+    private javax.swing.JRadioButton nonCaffein;
     private javax.swing.JRadioButton nonVegan;
+    private javax.swing.JCheckBox pahit;
+    private javax.swing.JRadioButton panas;
     private javax.swing.JCheckBox pedas;
+    private javax.swing.JRadioButton sedang;
     private javax.swing.ButtonGroup shtMakanan;
     private javax.swing.ButtonGroup sizeMinuman;
     private javax.swing.JRadioButton vegan;
