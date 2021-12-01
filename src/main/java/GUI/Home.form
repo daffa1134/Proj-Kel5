@@ -80,10 +80,10 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="bg">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\Kuliah\GitHub\Project_Kel5\src\main\java\Images\Menu.jpeg"/>
+              <Image iconType="3" name="/images/Menu.jpeg"/>
             </Property>
           </Properties>
           <Constraints>

@@ -70,7 +70,7 @@ public class DaftarTag extends javax.swing.JFrame {
         jLabel8.setText("- China, Indonesia, Italia, Jepang,");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, 350, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("D:\\Kuliah\\GitHub\\Project_Kel5\\src\\main\\java\\Images\\bg-2.jpg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bg-2.jpg"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 660));
 
         pack();

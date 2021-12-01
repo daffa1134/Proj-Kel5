@@ -253,7 +253,7 @@ public class Recommendation extends javax.swing.JFrame {
         });
         layerMakanan.add(negaraMkn, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 369, 160, -1));
 
-        jLabel13.setIcon(new javax.swing.ImageIcon("D:\\Kuliah\\GitHub\\Project_Kel5\\src\\main\\java\\Images\\mkn.png")); // NOI18N
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mkn.png"))); // NOI18N
         layerMakanan.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 420, 350));
 
         jLayeredPane1.add(layerMakanan, "card2");
@@ -400,7 +400,7 @@ public class Recommendation extends javax.swing.JFrame {
         });
         layerMinuman.add(negaraMnum, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 438, 160, -1));
 
-        jLabel15.setIcon(new javax.swing.ImageIcon("D:\\Kuliah\\GitHub\\Project_Kel5\\src\\main\\java\\Images\\mnm.png")); // NOI18N
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/mnm.png"))); // NOI18N
         layerMinuman.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 360, 330));
 
         jLayeredPane1.add(layerMinuman, "card3");
@@ -448,7 +448,7 @@ public class Recommendation extends javax.swing.JFrame {
         });
         bg.add(backHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 760, 30, 30));
 
-        jLabel14.setIcon(new javax.swing.ImageIcon("D:\\Kuliah\\GitHub\\Project_Kel5\\src\\main\\java\\Images\\bg.jpg")); // NOI18N
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bg.jpg"))); // NOI18N
         bg.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 800));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
