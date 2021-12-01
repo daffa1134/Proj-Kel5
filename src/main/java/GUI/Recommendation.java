@@ -258,7 +258,7 @@ public class Recommendation extends javax.swing.JFrame {
 
         jLayeredPane1.add(layerMakanan, "card2");
 
-        layerMinuman.setBackground(new java.awt.Color(100, 149, 237));
+        layerMinuman.setBackground(new java.awt.Color(152, 251, 152));
         layerMinuman.setPreferredSize(new java.awt.Dimension(600, 480));
         layerMinuman.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
