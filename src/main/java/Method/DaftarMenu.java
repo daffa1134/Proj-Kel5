@@ -12,18 +12,22 @@ import java.util.ArrayList;
  */
 public class DaftarMenu {
     
-    private Makanan spaghetti;
-    private Makanan nasiGoreng;
-    private Makanan rotiDaging;
-    private Makanan koftaSandwich;
-    private ArrayList<Makanan> menuMakanan = new ArrayList<>();
+    private final Makanan spaghetti;
+    private final Makanan nasiGoreng;
+    private final Makanan rotiDaging;
+    private final Makanan koftaSandwich;
+    private final Minuman ocha;
+    private final Minuman iceABCD;
+    private final Minuman thaiTea;
     private ArrayList<String> tagSpaghetti = new ArrayList<>();
     private ArrayList<String> tagNasiGoreng = new ArrayList<>();
     private ArrayList<String> tagRotiDaging = new ArrayList<>();
     private ArrayList<String> tagKoftaSandwich = new ArrayList<>();
+    private ArrayList<String> tagOcha = new ArrayList<>();
+    private ArrayList<String> tagIceABCD = new ArrayList<>();
+    private ArrayList<String> tagThaiTea = new ArrayList<>();
 
     public DaftarMenu() {
-        
         tagSpaghetti.add("manis");
         tagSpaghetti.add("asam");
         tagSpaghetti.add("pedas");
@@ -51,15 +55,19 @@ public class DaftarMenu {
 
         koftaSandwich = new Makanan("Kofta Sandwich", 13000, false, false, tagKoftaSandwich, "Mesir");
 
-        menuMakanan.add(spaghetti);
-        menuMakanan.add(nasiGoreng);
-        menuMakanan.add(rotiDaging);
-        menuMakanan.add(koftaSandwich);
+        tagOcha.add("pahit");
 
-    }
+        ocha = new Minuman("Ocha", 10000, false, false, tagOcha, "Jepang");
 
-    public int getJlhMakanan() {
-        return this.menuMakanan.size();
+        tagIceABCD.add("manis");
+        tagIceABCD.add("milk");
+        
+        iceABCD = new Minuman("Ice ABCD", 7000, true, false, tagIceABCD, "Malaysia");
+
+        tagThaiTea.add("manis");
+        tagThaiTea.add("milk");
+
+        thaiTea = new Minuman("Thai Tea", 10000, true, false, tagThaiTea, "Thailand");
     }
 
     public Makanan getSpaghetti() {
@@ -77,5 +85,16 @@ public class DaftarMenu {
     public Makanan getKofta() {
         return this.koftaSandwich;
     }
-    
+
+    public Minuman getOcha() {
+        return this.ocha;
+    }
+
+    public Minuman getIceABCD() {
+        return this.iceABCD;
+    }
+
+    public Minuman getThaiTea() {
+        return this.thaiTea;
+    }
 }
