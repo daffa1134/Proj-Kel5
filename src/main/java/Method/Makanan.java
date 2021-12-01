@@ -51,5 +51,4 @@ public class Makanan {
     public String getNegara() {
         return this.negara;
     }
-
 }
